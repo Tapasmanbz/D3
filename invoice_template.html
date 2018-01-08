@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Materialize Bootstrap Admin panel</title>
+
+  <!-- Favicon and touch icons -->
+  <link rel="shortcut icon" href="assets/images/logo.svg">
+
+  <!-- Start Global Mandatory Style
+  =====================================================================-->
+  <!-- jquery-ui css -->
+  <link href="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+  <!-- materialize css -->
+  <link href="assets/plugins/materialize/css/materialize.min.css" rel="stylesheet">
+  <!-- Bootstrap css-->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animation Css -->
+  <link href="assets/plugins/animate/animate.css" rel="stylesheet" />
+  <!-- Material Icons CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <!-- simplebar scroll css -->
+  <link href="assets/plugins/simplebar/dist/simplebar.css" rel="stylesheet" type="text/css" />
+  <!-- mCustomScrollbar css -->
+  <link href="assets/plugins/malihu-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+  <!-- custom CSS -->
+  <link href="assets/dist/css/stylematerial.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <!--navbar top-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <!-- Logo -->
+      <a class="navbar-brand pull-left" href="dashboard.html">
+        <!-- <img src="assets/images/logo.svg" alt="logo" width="205" height="60"> -->
+        <h1 style="margin-top:10px; margin-left:25px"> INVOICE </h1>
+      </a>
+      <a id="menu-toggle">
+        <i class="material-icons">apps</i>
+      </a>
+      <div class="navbar-custom-menu hidden-xs">
+        <ul class="nav navbar-nav navbar-left hidden-xs">
+          <li class="top-search "><a href="#search"><i class="material-icons">search</i></a></li>
+          <li>
+            <div id="search" class="top-search">
+              <button type="button" class="close">x</button>
+              <form>
+                <input type="search" value="" placeholder="type For searching..." />
+                <button type="submit" class="btn">Search</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar navbar-right">
+          <!--Notification-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">notifications_active</i><span class="numbers">8</span>
+            </a>
+            <ul class="dropdown-menu dropdown-message mCustomScrollbar animated bounceIn dropdown-notification" data-mcs-theme="minimal">
+              <li class="list-details">
+                <!-- start notification -->
+                <a href="#">
+                  <div class="pro-images pull-left">
+                    <img src="assets/dist/img/avatar4.png" class="img-circle" height="40" width="40" alt="User Image">
+                  </div>
+                  <h5 class="indigo-text">Mr.alrazy</h5>
+                  <p>Please oreder 10 pices of kits..</p>
+                  <span class="badge pro-badge teal">15 hours ago</span>
+                </a>
+              </li>
+              <li class="list-details">
+                <!-- start notification -->
+                <a href="#">
+                  <div class="pro-images pull-left">
+                    <img src="assets/dist/img/avatar3.png" class="img-circle" height="40" width="40" alt="User Image">
+                  </div>
+                  <h5 class="purple-text">Jahir</h5>
+                  <p>Please oreder 10 pices of kits..</p>
+                  <span class="badge pro-badge teal">15 hours ago</span>
+                </a>
+              </li>
+
+              <li class="list-details">
+                <!-- start notification -->
+                <a href="#">
+                  <div class="pro-images pull-left">
+                    <img src="assets/dist/img/avatar2.png" class="img-circle" height="40" width="40" alt="User Image">
+                  </div>
+                  <h5 class="blue-text">Karim</h5>
+                  <p>Please oreder 10 pices of kits..</p>
+                  <span class="badge pro-badge teal">15 hours ago</span>
+                </a>
+              </li>
+              <li class="list-details list-ntfc">
+                <!-- start notification -->
+                <a href="#">
+                  <div class="pro-images pull-left">
+                    <img src="assets/dist/img/avatar4.png" class="img-circle" height="40" width="40" alt="User Image">
+                  </div>
+                  <h5 class="teal-text">Shipon</h5>
+                  <p>Please oreder 10 pices of kits..</p>
+                  <span class="badge pro-badge teal">15 hours ago</span>
+                </a>
+              </li>
+            </ul>
+            <!-- /.notification -->
+            <!--tasks-->
+            <li class="list-details dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="material-icons">assignment</i><span class="numbers">6+</span>
+              </a>
+              <ul class="dropdown-menu dropdown-message mCustomScrollbar animated bounceIn" data-mcs-theme="minimal">
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <p>
+                      <span class="label-primary pro-label label label-default pull-right">35%</span> Data table error
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="35%" style="width: 35%">
+                        <span class="sr-only">35% Complete (primary)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start message -->
+                  <a href="#">
+                    <p>
+                      <span class="label-success pro-label label label-default pull-right">55%</span> Change theme color
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="55%" style="width: 55%">
+                        <span class="sr-only">55% Complete (primary)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start message -->
+                  <a href="#">
+                    <p>
+                      <span class="label-info pro-label label label-default pull-right">60%</span> Change the font-family
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="60%" style="width: 60%">
+                        <span class="sr-only">60% Complete (info)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start message -->
+                  <a href="#">
+                    <p>
+                      <span class="label-warning pro-label label label-default pull-right">80%</span> Animation skip
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="80%" style="width: 80%">
+                        <span class="sr-only">80% Complete (warning)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start message -->
+                  <a href="#">
+                    <p>
+                      <span class="pro-label label label-default deep-purple pull-right">75%</span> Add More Ui
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped deep-purple active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="75%" style="width: 75%">
+                        <span class="sr-only">75% Complete (purple)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start message -->
+                  <a href="#">
+                    <p>
+                      <span class="pro-label label label-default teal pull-right">50%</span> Add visitor
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped teal active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="50%" style="width: 50%">
+                        <span class="sr-only">50% Complete (teal)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start message -->
+                  <a href="#">
+                    <p>
+                      <span class="pro-label label label-default red pull-right">90%</span> system ststus recheck
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped active red" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" data-original-title="90%" style="width: 90%">
+                        <span class="sr-only">90% Complete (teal)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- /.tasks -->
+            <!--tasks-->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="material-icons">message</i><span class="numbers">9+</span>
+              </a>
+              <ul class="dropdown-menu dropdown-message mCustomScrollbar animated bounceIn" data-mcs-theme="minimal">
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <div class="tasks pull-left">
+                      <i class="fa fa-file-text-o blue-grey"></i>
+                    </div>
+                    <p>Photo loction should be redy...</p>
+                    <span class="badge blue-grey">3 days</span>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <div class="tasks pull-left">
+                      <i class="fa fa-user-circle blue"></i>
+                    </div>
+                    <p>user panel should be redy...</p>
+                    <span class="badge blue">20 days</span>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <div class="tasks pull-left">
+                      <i class="fa fa-file-text indigo"></i>
+                    </div>
+                    <p>file loction should be checked...</p>
+                    <span class="badge indigo">3 days</span>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <div class="tasks pull-left">
+                      <i class="fa fa-book deep-purple"></i>
+                    </div>
+                    <p>room should be booked...</p>
+                    <span class="badge deep-purple">6 days</span>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <div class="tasks pull-left">
+                      <i class="fa fa-bell red"></i>
+                    </div>
+                    <p>tasks are not created directly...</p>
+                    <span class="badge red">5 days</span>
+                  </a>
+                </li>
+                <li class="list-details">
+                  <!-- start tasks -->
+                  <a href="#">
+                    <div class="tasks pull-left">
+                      <i class="fa fa-bullhorn"></i>
+                    </div>
+                    <p>projects should be Complete...</p>
+                    <span class="badge #26a69a">10 days</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- /.tasks -->
+            </li>
+            <!--user profile-->
+            <li class="dropdown">
+              <a class='dropdown-button user-pro' href='#' data-activates='dropdown-user'>
+                <img src="assets/dist/img/avatar5.png" class="img-circle" height="45" width="50" alt="User Image">
+              </a>
+              <ul id='dropdown-user' class='dropdown-content'>
+                <li>
+                  <a href="#!"><i class="material-icons">perm_identity</i> View profile</a>
+                </li>
+                <li>
+                  <a href="#!"><i class="material-icons">settings</i> Settings</a>
+                </li>
+                <li>
+                  <a href="#!"><i class="material-icons">lock</i> Logout</a>
+                </li>
+              </ul>
+            </li>
+            <!-- /.user profile -->
+          </ul>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper" class="waves-effect" data-simplebar>
+        <div class="navbar-default sidebar" role="navigation">
+          <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu" >
+
+              <li style="margin-top:17px; margin-bottom:16px;"><a href="dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
+
+              <li class="list-divider"></li>
+              <li class="list-header">QUICK BOOKS</li>
+              <li>
+                <a href="#"><i class="material-icons">multiline_chart</i>Reports</a>
+              </li>
+              <li>
+                <a href="#"><i class="material-icons">receipt</i>Invoices</a>
+              </li>
+              <li>
+                <a href="#"><i class="material-icons">description</i>Bills</a>
+              </li>
+              <li>
+                <a href="#"><i class="material-icons">assessment</i>Estimates</a>
+              </li>
+              <li>
+                <a href="#"><i class="material-icons">cached</i>Track</a>
+              </li>
+              <li>
+                <a href="#"><i class="material-icons">supervisor_account</i>Clients</a>
+              </li>
+              <li>
+                <a href="#"><i class="material-icons">perm_data_setting</i>Business Settings</a>
+              </li>
+              <li class="side-last"></li>
+            </ul>
+            <!-- ./sidebar-nav -->
+          </div>
+          <!-- ./sidebar -->
+        </div>
+        <!-- ./sidebar-nav -->
+      </div>
+      <!-- ./sidebar-wrapper -->
+
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+        <div class="page-content">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <div>
+              <span><h3 style="display:inline;">New Invoice</h3>
+                <ul style="display:inline;margin-left:30px;">
+                  <li style="display:inline;">
+                    <a><i class="material-icons" aria-hidden="true">home</i></a>
+                  </li>
+                  <li style="display:inline;">-</li>
+                  <li style="display:inline;">
+                    <a>Invoice</a>
+                  </li>
+                  <li style="display:inline;">-</li>
+                  <li style="display:inline;">
+                    <a>New Invoice</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- page section -->
+            <div class="container-fluid">
+              <!-- basic forms -->
+              <form>
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <i class="material-icons">receipt</i>
+                        <h2 style="display:inline;">Invoice</h2>
+                      </div>
+                      <div class="card-content">
+
+                        <section name="1">
+                          <div class="row">
+                            <div class="col-lg-8">
+
+                              <div class="form-group basic-textarea green-border-focus">
+                                <label for="invoice_description" style="font-size: 14px;">Add Description</label>
+                                <textarea class="form-control z-depth-1" id="invoice_description" rows="3"></textarea>
+                              </div>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                              <!-- Drag and Drop -->
+                              <div class="wrapper">
+                                <label for="files">
+                                  <div class="drop">
+                                    <div class="cont">
+                                      <div class="desc">
+                                        your logo here or click to upload
+                                      </div>
+                                    </div>
+                                    <output id="list"></output>
+                                    <input id="files" align="center" multiple="true" name="files[]" type="file" style="display:none"/>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                            <!-- ./Drag and Drop -->
+                          </div>
+                        </section>
+                        <hr style="border-top: 1px dashed #ddd; margin:20px 0px 20px;" />
+                        <section name="2">
+                          <div class="row my-4 justify-content-center align-items-center">
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label>Invoice No</label>
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">#</span>
+                                  <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label for="sel_lang">* Language</label>
+                                <select id="sel_lang">
+                                  <option> English </option>
+                                  <option> Spanish </option>
+                                  <option> Portuges </option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label for="sel_cur">* Currency</label>
+                                <select id="sel_cur">
+                                  <option> United States - USD </option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+                        <hr style="border-top: 1px dashed #ddd; margin:20px 0px 20px;" />
+                        <section name="3">
+                          <div class="row justify-content-around"><!-- Grid System doesn't working -->
+                            <div class="col-lg-6">
+                              <div style="border:3px solid #ddd; padding:20px;">
+                                <address>
+                                  <p><b>From</b><a style="float:right">Edit Business Profile</a></p>
+                                  <p>Mark Andre</p>
+                                  <p>P.O. Box 942873 Sacramento,</p>
+                                  <p>CA 94273-0001</p>
+                                </address>
+                              </div>
+
+                              <div style="padding:20px;">
+                                <p><b>To</b><a style="float:right">Edit Business Profile</a></p>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" style="display:border-box" placeholder="Enter Client Name">
+                                </div>
+                              </div>
+                            </div>
+                            <!-- <div class="col-lg-1"></div> -->
+                            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                              <div class="row justify-content-around">
+                                <div class="col-lg-11">
+                                  <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <div class="form-control-sm">
+                                      <input id="date" class="datepicker" type="date" style="display:inline-block"/>
+                                      <!-- <i class="material-icons" style="display:inline-block">date_range</i> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-11">
+                                  <div class="form-group">
+                                    <label for="sel_invoice_due">Invoice Due</label>
+                                    <select id="sel_invoice_due">
+                                      <option> English </option>
+                                      <option> Spanish </option>
+                                      <option> Portuges </option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-11">
+                                  <div class="form-group">
+                                    <label for="purchase_order_no">Purchase Order Number</label>
+                                    <input id="purchase_order_no" type="text" class="form-control">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+                        <hr style="border-top: 1px dashed #ddd; margin:20px 0px 20px;" />
+                        <section name="4">
+                          <div class="row"><!-- Grid System doesn't working -->
+                            <div class="col-lg-6">
+                              <div class=form-group>
+                                <label for="description">Description</label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="Item Name & Description"></textarea>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <label for="quantity">Quantity</label>
+                                    <input id="quantity" class="form-control" type="text" placeholder="Quantity"/>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <label for="rate">Rate</label>
+                                    <input id="rate" class="form-control" type="text" placeholder="Rate"/>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <label for="Amount">Amount</label>
+                                    <input id="amount" class="form-control" type="text" placeholder="Amount"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+                        <hr style="border-top: 1px dashed #ddd; margin:20px 0px 20px;" />
+                        <section name="5">
+                          <div class="row justify-content-end"><!-- Grid System doesn't working -->
+                            <div class="col-lg-8 col-lg-offset-4">
+                              <div class="row justify-content-end">
+                                <div class="col-lg-5">
+                                  <p>Sub Total</p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <p style="float:right">0.0</p>
+                                </div>
+                              </div>
+                              <hr/>
+                              <div class="row justify-content-end">
+                                <div class="col-lg-5">
+                                  <p><b>Total (USD)</b></p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <p style="float:right"><b>0.0</b></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+                        <hr style="border-top: 1px dashed #ddd; margin:20px 0px 20px;" />
+                        <section name="6">
+                          <div class="row justify-content-around"><!-- Grid System doesn't working -->
+                            <div class="col-lg-4 col-lg-offset-8 justify-content-end">
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">Balance</span>
+                                  <input type="text" class="form-control" placeholder="USD     						0.00"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row justify-content-around"><!-- Grid System doesn't working -->
+                            <div class="col-lg-12">
+                              <label for="note">Invoice Note <a>(Default Note)</a></label>
+                              <textarea class="form-control" id="note" rows="4" placeholder=""></textarea>
+                            </div>
+                          </div>
+                        </section>
+
+                      </div>
+                      <!-- ./end card content -->
+
+                      <div class="card-header">
+                        <button class="btn btn-primary"> Save </button>
+                        <button class="btn btn-default"> Cancel </button>
+                        <button class="btn btn-danger" style="float:right"> Save Draft</button>
+                      </div>
+
+                    </div>
+                    <!-- ./end card -->
+                  </div>
+                  <!-- ./row -->
+                </form>
+                <!-- ./basic forms -->
+              </div>
+              <!-- ./cotainer -->
+
+              <!-- Footer -->
+              <section class="content-header z-depth-1" style="margin-bottom: 0px;">
+
+                <div class="header-title">
+                  <h2 style="display:inline">2017 &copy; Invoice by <a>Teknotrait</a></h2>
+
+                  <ul style="display:inline; float:right;">
+                    <li style="display:inline; margin-right:10px;"><a href="index.html">About</a></li>
+                    <li style="display:inline; margin-right:10px;"><a href="index.html">Privacy</a></li>
+                    <li style="display:inline; margin-right:10px;"><a href="index.html">T&C</a></li>
+                    <li style="display:inline; margin-right:10px;"><a href="index.html">Purchase</a></li>
+                    <li style="display:inline; margin-right:10px;"><a href="index.html">About</a></li>
+                  </ul>
+                </div>
+              </section>
+              <!-- ./Footer -->
+            </div>
+            <!-- ./page-content -->
+          </div>
+          <!-- ./page-content-wrapper -->
+
+          <!-- Preloader -->
+          <div id="preloader">
+            <div class="preloader-position">
+              <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-teal">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Preloader -->
+          <!-- Start Core Plugins-->
+
+          <!-- jQuery -->
+          <script src="assets/plugins/jQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
+          <!-- jquery-ui -->
+          <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+          <!-- Bootstrap -->
+          <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+          <!-- materialize  -->
+          <script src="assets/plugins/materialize/js/materialize.min.js" type="text/javascript"></script>
+          <!-- metismenu-master -->
+          <script src="assets/plugins/metismenu-master/dist/metisMenu.min.js" type="text/javascript"></script>
+          <!-- m-custom-scrollbar -->
+          <script src="assets/plugins/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+          <!-- scroll -->
+          <script src="assets/plugins/simplebar/dist/simplebar.js" type="text/javascript"></script>
+
+          <!-- custom js -->
+          <script src="assets/dist/js/custom.js" type="text/javascript"></script>
+          <!-- End Core Plugins-->
+          <!-- Start Theme label Script-->
+          <!-- main js -->
+          <script src="assets/dist/js/main.js" type="text/javascript"></script>
+          <script src="assets/js/index.js" type="text/javascript"></script>
+          <!-- End Theme label Script-->
+          <script>
+          "use strict";
+          $(function () {
+            $('select').material_select();
+            Materialize.updateTextFields();
+            // autocomplete
+            $('input.autocomplete').autocomplete({
+              data: {
+                "Apple": null,
+                "Microsoft": null,
+                "Google": 'https://placehold.it/250x250'
+              },
+              limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+              onAutocomplete: function (val) {
+                // Callback function when value is autcompleted.
+              },
+              minLength: 1 // The minimum length of the input for the autocomplete to start. Default: 1.
+            });
+
+            //datepicker
+            $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 15 // Creates a dropdown of 15 years to control year
+            });
+          });
+          </script>
+
+        </body>
+
+        </html>

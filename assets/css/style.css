@@ -1,0 +1,62 @@
+.index {
+  margin-top: 5%;
+  padding: 30px;
+  background: url("../images/bg-3.jpg") no-repeat center center;
+  /* background-size: cover; */
+}
+
+.login_logo {
+  width: 100px;
+  height: auto;
+}
+
+.signup_form {
+  display: none;
+}
+
+.reset_login_form {
+  display: none;
+}
+
+.submit {
+  margin: 10%;
+  border-radius: 60px;
+}
+
+.submit:hover {
+  color: white !important;
+  background-color: #9C27B0;
+}
+
+.card-content .vertical-divider{
+  border-left: 1px solid #c9d5de;
+  border-right: 1px solid #c9d5de;
+  height:100%;
+}
+
+/* .vertical-divider{
+clear: both;
+position: relative;
+}
+
+.vertical-divider:after {
+clear: both;
+content: " ";
+display: block;
+height: 0;
+visibility: hidden;
+}
+
+.vertical-divider .col-lg-4:not(:first-child):after{
+background: #DDDDDD;
+bottom: 0;
+content: " ";
+margin-left: -10px;
+position: absolute;
+top: 0;
+width: 2px;
+}
+
+.card-content>div>div {
+float: left; display: inline; margin-left: 10px; margin-right: 10px;
+} */

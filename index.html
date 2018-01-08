@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Welcome to D3</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Welcome to </title>
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- /.Page styles -->
+
+</head>
+
+<body class="">
+  <!-- begin:: Page -->
+  <div class="container-fluid text-center">
+
+    <div class="row m-4 justify-content-center align-items-center index">
+      <!-- Intro -->
+      <div class="col-xs-5 col-md-5 col-lg-5 my-4">
+        <div>
+          <a href="#">
+            <img class="login_logo py-4" src="assets/images/logo.svg">
+          </a>
+        </div>
+        <div class="">
+          <h3>
+            The simple way to send and track good-looking invoices,so you can focus on your business.
+          </h3>
+        </div>
+        <div class="">
+          Start Invoicing now. Grow your team
+        </div>
+        <div class="">
+          <button type="button" id="signup" class="btn btn-outline-secondary submit"  onclick="document.getElementById('signup_form').style.display='block';document.getElementById('login_form').style.display='none'; document.getElementById('reset_login_form').style.display='none';">
+            Get An Account
+          </button>
+        </div>
+      </div>
+      <!--/.Intro -->
+
+      <!-- Separator -->
+      <div class="col-xs-2 col-md-2 col-lg-2">
+        <img class="img-fluid" src="assets/images/shad.png"/>
+      </div>
+      <!-- /.Separator -->
+
+      <!-- Forms -->
+      <div class="col-xs-5 col-md-5 col-lg-5 my-4">
+        <!-- Sign up -->
+        <form method="post" id="signup_form" class="signup_form" action="#">
+          <h3> Signup To Your Account </h3>
+          <div class="md-form my-4">
+            <input class="form-control" type="text" placeholder="Fullname" name="fullname">
+          </div>
+          <div class="md-form">
+            <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
+          </div>
+          <div class="md-form">
+            <input class="form-control" type="password" placeholder="Password" name="password">
+          </div>
+          <div class="md-form">
+            <input class="form-control" type="password" placeholder="Confirm Password" name="rpassword">
+          </div>
+          <div>
+            <label>
+              <input class="checkbox" type="checkbox" name="agree">
+              I Agree the
+              <a href="#">
+                terms and conditions
+              </a>
+              .
+              <span></span>
+            </label>
+            <span class="form_help"></span>
+          </div>
+          <div class="login_form-action">
+            <button id="login_signup_submit" class="btn btn-purple btn-rounded submit">
+              Sign Up
+            </button>
+            <button id="login_signup_cancel" class="btn btn-outline-secondary waves-effect btn-rounded submit" onclick="document.getElementById('')">
+              Cancel
+            </button>
+          </div>
+        </form>
+        <!-- /.Sign up -->
+
+        <!-- Sign in -->
+        <form method="post" id="login_form" class="login_form" action="./dashboard.html">
+          <h3> Signin To Your Account </h3>
+          <div class="form-group mt-4">
+            <input class="form-control-sm" type="text" placeholder="Username" name="username" autocomplete="off" required>
+          </div>
+          <div class="form-group">
+            <input class="form-control-sm" type="password" placeholder="Password" name="password"  required>
+          </div>
+
+          <!-- <div class="md-form form-sm mt-4">
+            <i class="fa fa-user prefix grey-text" style="margin-right: 30rem; width: 90%; width: -webkit-calc(100% - 30rem); width: calc(100% - 30rem);"></i>
+            <input type="text" id="defaultForm-email" class="form-control">
+            <label for="defaultForm-email">Username</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fa fa-lock prefix grey-text"></i>
+            <input type="password" id="defaultForm-pass" class="form-control">
+            <label for="defaultForm-pass">Password</label>
+          </div> -->
+
+          <div class="row">
+            <!-- Not able to change color and design of checkbox -->
+            <!-- <div class="col form-group d-flex justify-content-start"> -->
+            <div class="col form-check d-flex justify-content-start">
+              <label>
+                <input type="checkbox" class="filled-in" name="remember">
+                Remember me
+                <span></span>
+              </label>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a href="javascript:;" id="login_forget_password" class="link" onclick="document.getElementById('login_form').style.display='none';document.getElementById('reset_login_form').style.display='block';" >
+                Forget Password ?
+              </a>
+            </div>
+          </div>
+          <div class="login_form-action">
+            <button onclick="location.href = './index.html';" type="submit" id="signin_submit" class="btn btn-purple btn-rounded submit" onclick="validateForm()">
+              Sign In
+            </button>
+          </div>
+        </form>
+        <!-- /.Sign in -->
+
+        <!-- Reset Password -->
+        <form method="post" id="reset_login_form" class="reset_login_form" action="./index.html">
+          <div class="md-form my-4">
+            <input class="form-control" type="text" placeholder="Email" name="email" id="email" autocomplete="off">
+          </div>
+          <div class="login_form-action">
+            <button id="forget_password_submit" class="btn btn-purple btn-rounded submit">
+              Request
+            </button>
+            <button id="forget_password_cancel" class="btn btn-outline-secondary waves-effect btn-rounded submit">
+              Cancel
+            </button>
+          </div>
+        </form>
+        <!-- /.Reset Password -->
+
+      </div>
+      <!-- /.Forms -->
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/js/mdb.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
